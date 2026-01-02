@@ -3,9 +3,9 @@ import { linkColorsToSwatches } from "./swatches";
 
 export var onInit = initialize;
 export function run(ctx: PlaygroundContext) {
-    // // select locked MeaXure markers in current page
+    // // select locked jMeaXure markers in current page
     // selectLayers(
-    //     layer => layer.name.startsWith('#meaxure') && layer.locked,
+    //     layer => layer.name.startsWith('#jmeaxure') && layer.locked,
     //     context.page
     // );
     linkColorsToSwatches(lib => lib.name == 'zent')

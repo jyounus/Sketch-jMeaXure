@@ -25,13 +25,64 @@ export function exportImage(layer: Layer, format: SMExportFormat,savePath:string
     );
 
     // Use the new sketch.export API for file export
+    // Export into the target folder (Sketch may choose the final filename)
+    let outputDir = savePath + '/' + path;
     sketch.export(layer, {
-        output: savePath+'/'+path,
+        output: outputDir,
         formats: format.format,
         scales: format.scale.toString(),
     });
 
-    return encodeURI(path + "/" + fileName);
+    // Sketch 2025.3 fix: The image scales are now correctly exported.
+    
+    // Attempt to find the actual file created by Sketch in the output folder.
+    // Prefer exact match with the @scale suffix; if not found, prefer any file that
+    // starts with `name` and ends with the extension; otherwise fallback to constructed name.
+    let fs: any = NSFileManager.defaultManager();
+    let actualFileName = fileName;
+    let files: any[] = [];
+    try {
+        files = fs.contentsOfDirectoryAtPath_error(outputDir, null) || [];
+    } catch (err) {
+        files = [];
+    }
+
+    // Normalize strings to JS strings for comparison
+    let exact = fileName;
+    let baseSuffix = "." + format.format;
+
+    if (files && files.length) {
+        // First try exact match
+        for (let i = 0; i < files.length; i++) {
+            let f = String(files[i]);
+            if (f === exact) {
+                actualFileName = f;
+                break;
+            }
+        }
+        // If no exact match, try to find a file that starts with name and ends with extension
+        if (actualFileName === fileName) {
+            for (let i = 0; i < files.length; i++) {
+                let f = String(files[i]);
+                if (f.indexOf(name) === 0 && f.endsWith(baseSuffix)) {
+                    actualFileName = f;
+                    break;
+                }
+            }
+        }
+        // As a last resort, prefer any file that contains the name and ends with extension
+        if (actualFileName === fileName) {
+            for (let i = 0; i < files.length; i++) {
+                let f = String(files[i]);
+                if (f.indexOf(name) !== -1 && f.endsWith(baseSuffix)) {
+                    actualFileName = f;
+                    break;
+                }
+            }
+        }
+    }
+
+    return encodeURI(path + "/" + actualFileName);
 }
 
 export function exportImageToBuffer(layer: Layer, format: SMExportFormat): Buffer {

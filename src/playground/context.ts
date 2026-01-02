@@ -1,4 +1,4 @@
-import { SMContext } from "../meaxure/common/context";
+import { SMContext } from "../jmeaxure/common/context";
 
 export interface PlaygroundContext {
     sketch: Sketch,

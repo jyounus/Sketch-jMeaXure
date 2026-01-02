@@ -2,7 +2,7 @@ import { state } from "../common";
 import { getIndex, mouseoutLayer, selectedLayer, removeSelected, getEventTarget } from "./helper";
 import { inspector } from "../render/inspector";
 import { distance, hideDistance } from "./distance";
-import { SMRect } from "../../src/meaxure/interfaces";
+import { SMRect } from "../../src/jmeaxure/interfaces";
 import { panMode } from "./panMode";
 
 export function layerEvents() {

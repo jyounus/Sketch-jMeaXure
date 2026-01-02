@@ -24,7 +24,7 @@ export function getLayerData(artboard: Artboard, layer: Layer | LayerPlaceholder
         dealWithPlaceholder(layer);
         return;
     }
-    // compatible with meaxure markers
+    // compatible with jmeaxure markers
     renameIfIsMarker(layer);
     // stopwatch.tik('before updateMaskStackBeforeLayer');
     updateMaskStackBeforeLayer(layer);
@@ -172,7 +172,7 @@ function getLayerStates(layer: Layer): LayerStates {
 
     while (layer.type != sketch.Types.Artboard && layer.type != sketch.Types.SymbolMaster) {
         let parent = layer.parent as Group;
-        if (!isMeaXure) isMeaXure = layer.name.startsWith('#meaxure-');
+        if (!isMeaXure) isMeaXure = layer.name.startsWith('#jmeaxure-');
         // if parents is shape, this is in shape group
         if (!isInShapeGroup) isInShapeGroup = parent.type == sketch.Types.Shape;
         if (!isHidden) isHidden = layer.hidden && !tempLayers.exists(layer);

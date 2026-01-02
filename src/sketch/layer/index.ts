@@ -58,9 +58,9 @@ export function extendLayer() {
     });
     Object.defineProperty(target, "CSSAttributes", {
         get: function () {
-            let layerCSSAttributes = this.sketchObject.CSSAttributes();
+            let layerCSSAttributes = this.sketchObject.CSSAttributeString().split('\n');
             let css = [];
-            for (let i = 0; i < layerCSSAttributes.count(); i++) {
+            for (let i = 0; i < layerCSSAttributes.length; i++) {
                 let attribute = new String(layerCSSAttributes[i]).toString();
                 css.push(attribute);
             }

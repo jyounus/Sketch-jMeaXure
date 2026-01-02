@@ -2,11 +2,11 @@
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
-export const meaxure = `
+export const jmeaxure = `
 (function () {
     let messageListeners = {};
     let replyListeners = {};
-    window.meaxure = class meaxure {
+    window.jmeaxure = class jmeaxure {
         static postMessage(type, message) {
             let requestID = uuidv4();
             let promise = new Promise((resolve, reject) => {
@@ -28,7 +28,7 @@ export const meaxure = `
                     delete replyListeners[requestID];
                 }, 30000);
             });
-            meaxure.postData({
+            jmeaxure.postData({
                 __CLIENT_MESSAGE_ID__: requestID,
                 __MESSAGE_TYPE__: type,
                 message: message,
@@ -70,7 +70,7 @@ export const meaxure = `
                     response = error;
                 }
             }
-            meaxure.postData({
+            jmeaxure.postData({
                 __MESSAGE_SUCCESS__: success,
                 __SERVER_MESSAGE_ID__: data.__SERVER_MESSAGE_ID__,
                 message: response
@@ -92,7 +92,7 @@ export function wrapWebViewScripts(script: string, requestID: string, ): string 
     return `
 (function(){
     function scriptCallback(success, result) {
-        meaxure.postData({
+        jmeaxure.postData({
             __MESSAGE_SUCCESS__: success,
             __SERVER_MESSAGE_ID__: "${requestID}",
             message: result

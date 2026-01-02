@@ -34,7 +34,7 @@ export function gotoArtboard(para: number | string, updateHash: boolean = true):
     document.querySelector('#artboard-' + index)?.classList.add('active');
     document.querySelector('#startpoint-' + index)?.classList.add('active');
     if (updateHash) updateURLHash();
-    document.title = state.current.name + ' - Sketch MeaXure';
+    document.title = state.current.name + ' - Sketch jMeaXure';
 }
 
 export function navigateByURLHash(updateHash: boolean = true) {

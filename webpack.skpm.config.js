@@ -13,7 +13,7 @@ module.exports = function (config, isPluginCommand) {
     /** you can change config here **/
     if (!isPluginCommand) return;
     let debug = !!process.env.DEBUG;
-    if (!debug) clearMapFilesForProduction('sketch-meaxure.sketchplugin/Contents');
+    if (!debug) clearMapFilesForProduction('sketch-jmeaxure.sketchplugin/Contents');
     config.mode = debug ? 'development' : 'production';
     config.entry = {
         mark: './src/index.ts',
@@ -21,7 +21,12 @@ module.exports = function (config, isPluginCommand) {
     config.module = {
         rules: [{
             test: /\.tsx?$/,
-            use: 'ts-loader',
+            use: {
+                loader: 'ts-loader',
+                options: {
+                    transpileOnly: true
+                }
+            },
             exclude: /node_modules/
         }]
     };

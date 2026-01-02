@@ -9,7 +9,7 @@ export function clearAllMarks() {
     let targets = context.selection.length ? context.selection.layers : [context.page];
     for (let target of targets) {
         for (let layer of target.getAllChildren()) {
-            if (layer.type == sketch.Types.Group && layer.name.startsWith('#meaxure-')) {
+            if (layer.type == sketch.Types.Group && layer.name.startsWith('#jmeaxure-')) {
                 layer.remove();
             }
         }
@@ -18,7 +18,7 @@ export function clearAllMarks() {
 
 export function toggleHidden() {
     let isHidden = true;
-    let marks = sketch.find<Group>('Group, [name^="#meaxure-"]', context.page);
+    let marks = sketch.find<Group>('Group, [name^="#jmeaxure-"]', context.page);
     for (let mark of marks) {
         // if one mark of all is visible, 
         // the curent state is visible, hide them all first
@@ -33,7 +33,7 @@ export function toggleHidden() {
 }
 export function toggleLocked() {
     let isLocked = true;
-    let marks = sketch.find<Group>('Group, [name^="#meaxure-"]', context.page);
+    let marks = sketch.find<Group>('Group, [name^="#jmeaxure-"]', context.page);
     for (let mark of marks) {
         // if one mark of all is unlocked, 
         // the curent state is unlocked, lock them all first

@@ -1,5 +1,5 @@
 import { state } from "../common";
-import { SMRect } from "../../src/meaxure/interfaces";
+import { SMRect } from "../../src/jmeaxure/interfaces";
 import { hideDistance } from "./distance";
 
 export function getEventTarget(eventNode: Element, event: Event, selector: string): HTMLElement {

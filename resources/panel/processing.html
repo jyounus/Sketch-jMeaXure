@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Processing - Sketch MeaXure</title>
+    <title>Processing - Sketch jMeaXure</title>
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     </div>
     <script>
         $('#processing').css('width', 0);
-        meaxure.onDidReceiveMessage('process', data => {
+        jmeaxure.onDidReceiveMessage('process', data => {
             try {
                 $('#processing').css('width', data.percentage + "%");
                 $('#processing-text').text(data.text);

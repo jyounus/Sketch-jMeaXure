@@ -4,8 +4,8 @@
 
 import { MochaJSDelegate } from './MochaJSDelegate';
 import { uuidv4, coscriptKeepAround, coscriptNotKeepAround } from './keepAround';
-import { logger } from '../meaxure/common/logger';
-import { meaxure, wrapWebViewScripts } from './webviewScripts';
+import { logger } from '../jmeaxure/common/logger';
+import { jmeaxure, wrapWebViewScripts } from './webviewScripts';
 import { dispatchFirstClick } from './dispatchFirstClick';
 
 export interface WebviewPanelOptions {
@@ -227,7 +227,7 @@ export class WebviewPanel {
         let delegate = new MochaJSDelegate({
             // https://developer.apple.com/documentation/webkit/webframeloaddelegate?language=objc
             "webView:didCommitLoadForFrame:": (webView, webFrame) => {
-                windowObject.evaluateWebScript(meaxure);
+                windowObject.evaluateWebScript(jmeaxure);
             },
             "webView:didFinishLoadForFrame:": (webView, webFrame) => {
                 if (this._DOMReadyListener) {
@@ -286,7 +286,7 @@ export class WebviewPanel {
     private _postData<T>(data: T): void {
         let windowObject = this._webview.windowScriptObject();
         let script = `
-            meaxure.raiseReceiveMessageEvent("${encodeURIComponent(JSON.stringify(data))}");
+            jmeaxure.raiseReceiveMessageEvent("${encodeURIComponent(JSON.stringify(data))}");
         `
         windowObject.evaluateWebScript(script);
     }

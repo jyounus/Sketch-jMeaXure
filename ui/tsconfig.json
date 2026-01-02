@@ -4,8 +4,12 @@
         "target": "es6",
         "noImplicitAny": false,
         "sourceMap": true,
-        "rootDir": ".",
+        "rootDir": "..",
         "noEmitOnError": true,
+        "esModuleInterop": true,
+        "typeRoots": ["../node_modules/@types","../src/@custom_types"],
+        "types": ["jquery"],
+        "skipLibCheck": true,
     },
     "exclude": [
         "node_modules",

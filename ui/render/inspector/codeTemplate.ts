@@ -1,5 +1,5 @@
 import { unitSize, unitCss } from "../helper";
-import { LayerData } from "../../../src/meaxure/interfaces";
+import { LayerData } from "../../../src/jmeaxure/interfaces";
 import { scaleSize } from "../../events/helper";
 import { propertyType } from "./shared";
 

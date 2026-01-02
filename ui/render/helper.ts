@@ -1,5 +1,5 @@
 import { project, state } from "../common";
-import { LayerData } from "../../src/meaxure/interfaces";
+import { LayerData } from "../../src/jmeaxure/interfaces";
 
 export function zoomSize(size: number) {
     return size * state.zoom / project.resolution;

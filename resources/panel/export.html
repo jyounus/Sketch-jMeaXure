@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Choose artboards - Sketch MeaXure</title>
+    <title>Choose artboards - Sketch jMeaXure</title>
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
@@ -66,7 +66,7 @@
                 filter(data);
             },
             sendOrderRequest = function () {
-                if (!window.meaxure) return;
+                if (!window.jmeaxure) return;
                 let data = {
                     order: $('input[name=order]:checked').val(),
                     reverse: $('input[name=reverse]:checked').val() == '1',
@@ -74,7 +74,7 @@
                     exportOption: $('input[name=export-option]:checked').length > 0,
                     selection: {},
                 }
-                meaxure.postMessage('sort', data).then(data => updateArtboardsList(data));
+                jmeaxure.postMessage('sort', data).then(data => updateArtboardsList(data));
             },
             filter = function (data) {
                 var $filter = $('#filter'),
@@ -356,7 +356,7 @@
                         var objectID = $(this).val();
                         data.selection[objectID] = true;
                     });
-                    meaxure.postMessage('submit', data);
+                    jmeaxure.postMessage('submit', data);
                 });
 
                 if (!data.selection) {
@@ -388,8 +388,8 @@
 
 <body>
     <script>
-        if (window.meaxure) {
-            meaxure.postMessage('init').then(data => {
+        if (window.jmeaxure) {
+            jmeaxure.postMessage('init').then(data => {
                 init(data);
                 onInitOK();
             }).catch(error => showError(error));

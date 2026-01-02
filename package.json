@@ -1,20 +1,20 @@
 {
-  "name": "sketch-meaxure",
+  "name": "sketch-jmeaxure",
   "description": "Make it a fun to create spec for developers and teammates",
-  "version": "3.5.1",
+  "version": "3.6.0",
   "engines": {
     "sketch": ">=2025"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitee.com/hubzyy/sketch-meaxure.git"
+    "url": "git+https://github.com/jyounus/Sketch-jMeaXure.git"
   },
   "skpm": {
-    "name": "Sketch MeaXure",
+    "name": "Sketch jMeaXure",
     "manifest": "src/manifest.json",
-    "homepage": "https://gitee.com/hubzyy/sketch-meaxure",
-    "appcast": "https://gitee.com/hubzyy/sketch-meaxure/raw/master/appcast.xml",
-    "main": "sketch-meaxure.sketchplugin",
+    "homepage": "https://github.com/jyounus/Sketch-jMeaXure",
+    "appcast": "https://github.com/jyounus/Sketch-jMeaXure/raw/master/appcast.xml",
+    "main": "sketch-jmeaxure.sketchplugin",
     "assets": [
       "resources/**/*"
     ]
@@ -31,15 +31,17 @@
     "@skpm/builder": "^0.7.0",
     "@types/node": "^17.0.19",
     "@types/sketch": "git+https://github.com/qjebbs/sketch.d.ts.git",
+    "minimatch": "^3.0.4",
     "skpm": "^1.3.1",
     "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.4",
+    "typescript": "^5.9.3",
+    "jquery": "^3.7.1",
     "webpack": "^4.44.2"
   },
-  "author": "utom & jebbs & hubzy <zy.jpeg@gmail.com>",
+  "author": "utom & jebbs & hubzy & jyounus <zy.jpeg@gmail.com>",
   "dependencies": {
     "@skpm/path": "^0.1.4",
-    "@types/jquery": "^3.5.13"
+    "@types/jquery": "^3.5.33"
   }
 }

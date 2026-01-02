@@ -2,24 +2,24 @@
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
-import { settingsPanel } from "./meaxure/panels/settingsPanel";
-import { updateContext } from "./meaxure/common/context";
-import { logger } from "./meaxure/common/logger";
-import { markToolbar } from "./meaxure/panels/toolbar";
-import { openURL } from "./meaxure/helpers/helper";
-import { exportSpecification } from "./meaxure/export";
-import { markNote } from "./meaxure/note";
-import { markPropertiesAll } from "./meaxure/properties";
-import { markOverlays } from "./meaxure/overlay";
-import { exportable } from "./meaxure/exportable";
-import { drawCoordinate } from "./meaxure/coordinate";
-import { drawSizes } from "./meaxure/size";
-import { drawSpacings } from "./meaxure/spacings";
-import { toggleHidden, toggleLocked, clearAllMarks } from "./meaxure/manage";
+import { settingsPanel } from "./jmeaxure/panels/settingsPanel";
+import { updateContext } from "./jmeaxure/common/context";
+import { logger } from "./jmeaxure/common/logger";
+import { markToolbar } from "./jmeaxure/panels/toolbar";
+import { openURL } from "./jmeaxure/helpers/helper";
+import { exportSpecification } from "./jmeaxure/export";
+import { markNote } from "./jmeaxure/note";
+import { markPropertiesAll } from "./jmeaxure/properties";
+import { markOverlays } from "./jmeaxure/overlay";
+import { exportable } from "./jmeaxure/exportable";
+import { drawCoordinate } from "./jmeaxure/coordinate";
+import { drawSizes } from "./jmeaxure/size";
+import { drawSpacings } from "./jmeaxure/spacings";
+import { toggleHidden, toggleLocked, clearAllMarks } from "./jmeaxure/manage";
 import { sketch } from "./sketch";
 import { EdgeVertical, Edge } from "./sketch/layer/alignment";
-import { renameOldMarkers } from "./meaxure/helpers/renameOldMarkers";
-import { runScript } from "./meaxure/runScript";
+import { renameOldMarkers } from "./jmeaxure/helpers/renameOldMarkers";
+import { runScript } from "./jmeaxure/runScript";
 
 export function commandInit(context) { updateContext(context); return false; }
 export function commandSettings(context?) { runAndCatch(settingsPanel, context); }
@@ -49,8 +49,8 @@ export function commandClear(context?) { runAndCatch(clearAllMarks, context); }
 export function commandExport(context?) { runAndCatch(exportSpecification, context); }
 export function commandRenameOldMarkers(context?) { runAndCatch(renameOldMarkers, context); }
 export function commandRunScript(context?) { runAndCatch(runScript, context); }
-export function linkFeedback(context?) { runAndCatch(openURL, context, "https://gitee.com/hubzyy/sketch-meaxure/issues"); }
-export function linkHome(context?) { runAndCatch(openURL, context, "https://gitee.com/hubzyy/sketch-meaxure"); }
+export function linkFeedback(context?) { runAndCatch(openURL, context, "https://github.com/jyounus/Sketch-jMeaXure/issues"); }
+export function linkHome(context?) { runAndCatch(openURL, context, "https://github.com/jyounus/Sketch-jMeaXure"); }
 
 function runAndCatch(fn: Function, context, ...args) {
     try {

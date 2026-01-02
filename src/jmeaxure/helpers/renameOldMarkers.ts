@@ -62,7 +62,7 @@ export function renameIfIsMarker(layer: Layer) {
 
 function renameMarkerV2(mark: Layer): boolean {
     if (!MARK_V2.test(mark.name)) return false;
-    mark.name = '#meaxure-' + mark.name.substring(1);
+    mark.name = '#jmeaxure-' + mark.name.substring(1);
     return true;
 }
 function renameMarkerV1(mark: Layer): boolean {
@@ -107,6 +107,6 @@ function renameMarkerV1(mark: Layer): boolean {
         default:
             break;
     }
-    mark.name = '#meaxure-' + leftPart + '-' + mark.name.split('#')[1];
+    mark.name = '#jmeaxure-' + leftPart + '-' + mark.name.split('#')[1];
     return true;
 }

@@ -1,5 +1,5 @@
 import { localize } from "../../common";
-import { LayerData } from "../../../src/meaxure/interfaces";
+import { LayerData } from "../../../src/jmeaxure/interfaces";
 import { unitSize } from "../helper";
 import { colorItem, propertyType } from "./shared";
 export function renderFont(layerData: LayerData): string {

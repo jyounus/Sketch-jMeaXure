@@ -1,75 +1,109 @@
-## Sketch MeaXure
+# Sketch jMeaXure (Updated for Sketch 2025.3+)
+fork of [Sketch meaXure](https://gitee.com/hubzyy/sketch-meaxure) 
+fork of [Sketch Measure](https://github.com/utom/sketch-measure) 
 
-最新版适配2025版本
+## Overview
+
+**Sketch jMeaXure** is a plugin for Sketch that helps generate design specs for developers and teammates. This repository is a fork of the project maintained by **hubzy**, which was a fork of the original project created by **utom**.
+
+The reason I created this repo is because utom's repository is outdated and no longer maintained, and hubzy's repo is hosted on Gitee and in Chinese, which I don’t understand. 
+
+Additionally, hubzy's repo hasn't been updated in over 6 months, and no new releases have been made to fix the export issue with the plugin. After the release of Sketch 2025.3, the export functionality broke due to API changes. I’ve made the necessary fixes to restore the export feature and ensure compatibility with Sketch 2025.3 and newer.
 
 
-> 感谢[@utom](https://github.com/utom)、[@jebbs](https://github.com/qjebbs)
-> 插件由原来的[@utom](https://github.com/utom)的`Sketch Measure`升级到[jebbs](https://github.com/qjebbs) `Sketch MeaXure`
-> 而我在[jebbs](https://github.com/qjebbs) `Sketch MeaXure`的基础上进行优化升级,感谢🙏两位大佬。
-> Sketch MeaXure是使用TypeScript对`Sketch Measure`的重新实现，它使用Sketch JavaScript API。
+### Original Repositories:
 
-## 安装
+* **[utom's repo (pre-Sketch 2025)](https://github.com/utom/sketch-measure)**: The original creator of this plugin that worked with older Sketch releases.
+* **[hubzy’s repo (updated for Sketch 2025)](https://gitee.com/hubzyy/sketch-jmeaxure/tree/master)**: hubzy’s fork, which was updated for Sketch 2025.
 
-⚠️macOS Ventura13.0请下载sketch 94版本～
+### Credits
 
-- [进入下载页面](https://gitee.com/hubzyy/sketch-meaxure/releases)
-- 下载 `sketch-meaxure.sketchplugin.zip`
-- 解压缩
-- 双击Sketch-Meaxure.sketchplugin
+* **utom**: For creating the original plugin and laying the foundation.
+* **hubzy**: For maintaining the plugin and providing the initial update for Sketch 2025 compatibility.
 
-[在线预览](http://hubzyy.gitee.io/sketch-meaxure/)
+---
 
-[项目源文件目录](./Directory.md)
+## What's New
 
-## 改进
+* **Updated dependencies**: All package versions have been updated to ensure compatibility and successful local builds.
+* **Export functionality restored**: Due to API changes in Sketch 2025.3, the export feature broke. This has been fixed, and the export function now works as expected.
+* **Default language changed to English**: The plugin’s default language was previously set to Chinese. Since I don’t understand Chinese, I’ve updated it to English to make it more accessible for English-speaking users.
 
-用户可以识别的改进：
+**Note:** While I plan to keep this plugin functional for future Sketch releases, I will not be adding new features. If you’d like to contribute, feel free to open a PR!
 
-1. 完全适用于最新版本的Sketch（v7.0）。
-2. 最新的`色调`功能支持。
-3. 轻松调整标记的大小，而不必担心破坏它们。 （`调整大小限制`功能）。
-4. 在激活`动画堆栈`的情况下直接导出。
-5. 自定义导出画板的顺序。
-6. 更好地显示文本片段。
-7. 重新组织功能和面板。
-   [@jebbs](https://github.com/qjebbs/sketch-meaxure)GitHub
+---
 
-## 二次改进
+## Contributing
 
-1. 预览[Demo](http://hubzyy.gitee.io/sketch-meaxure/)
-2. 添加瀑布流展示、方便预览、查找设计稿
-3. 导出新增`icons`文件夹，文件夹放置缩略图，便于网络跟快的加载。
-4. 切图素材可点击一键下载。
-5. 新增可选择`像素(px)2x、3x`倍数选项切换、设计稿建议为一倍图，默认导出即可。
-6. 在代码提示中新增width、height代码，对字体信息进行了优化，修复切换倍数时字体倍数不变的bug、圆角边框的优化。
-7. 复制CSS代码功能
-8. 还原了切图标注🥰
+I’m happy to accept pull requests that address bugs or improve the functionality of the plugin. If you’d like to contribute, please ensure:
 
-## 注意
+1. PRs are focused and professional - only include the necessary changes.
+2. Avoid committing unnecessary files or changes.
+3. Ensure your PR is easy to review by keeping changes small and well-documented.
+4. Contributions should be in English for easier review and understanding.
 
-如果您在管理由Sketch Measure创建的标记（切换隐藏/锁定，删除和导出）时遇到问题，请运行菜单“插件-Sketch MeaXure-帮助-”。
+I will review contributions and merge them if they align with the goal of maintaining compatibility with the latest Sketch versions.
 
-## 👍推荐相关项目
+---
 
-### files-preview-three
+## Installation & Building
 
-为了更好的管理管理导出的项目设计文件，弥补`meaxure`对项目管理上的缺失。
+These instructions are based on my development environment: macOS Tahoe 26.2.
 
-给大家推荐[files-preview-three](https://gitee.com/hubzyy/files-preview-three) 静态文件管理，使项目预览上体验更佳。
+### Prerequisites
 
-【新增】支持模型文件`gib` `gltf` 的预览，方便对模型文件预览，也方便了模型文件的研发对接，同时内嵌了[three-gltf-viewer](https://github.com/donmccurdy/three-gltf-viewer)方便模型调试。
+Ensure you're using **Node 20.19.6**. If you're using `nvm` (Node Version Manager), you can switch to this version by running:
 
-![imga1](https://gitee.com/hubzyy/files-preview-three/raw/three/assets/01.png)
+```bash
+nvm use 20.19.6
+```
 
-#### files-preview-three更新日志
+### Setup
 
-- **新增文档模式**
-- 支持预览 gif、bmp、webp、tif、svga 格式文件
-- 项目封面支持 gif 格式
-- 修复了 CentOS 下的运行问题
-- 优化图片预览体验
-- 新增支持模型gib gltf文件预览
-- 内嵌[three-gltf-viewer](https://github.com/donmccurdy/three-gltf-viewer)
-- 外部资源改为本地资源
-- 简化了md文档目录
-- 其他bug修复...
+1. **Clean up old dependencies**:
+   Remove the existing `node_modules` folder and `package-lock.json` file:
+
+   ```bash
+   rm -Rf node_modules && rm package-lock.json
+   ```
+
+2. **Install dependencies**:
+   Install the required dependencies:
+
+   ```bash
+   npm install --ignore-scripts
+   ```
+
+3. **Build the plugin**:
+   Build the project to generate the `.sketchplugin` file:
+
+   ```bash
+   npm run build
+   ```
+
+This will generate the `sketch-jmeaxure.sketchplugin` file for manual installation.
+
+---
+
+## Installing the Plugin into Sketch
+
+After building the plugin, you’ll have a `.sketchplugin` file. To install it:
+
+1. Copy the `.sketchplugin` file.
+
+2. Navigate to your Sketch plugin folder:
+
+   ```bash
+   ~/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins/
+   ```
+
+3. Paste the `.sketchplugin` file into this folder.
+
+The plugin should now be available for use in Sketch!
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+

@@ -1,5 +1,5 @@
 import { localize } from "../../common";
-import { LayerData } from "../../../src/meaxure/interfaces";
+import { LayerData } from "../../../src/jmeaxure/interfaces";
 import { colorItem, propertyType } from "./shared";
 export function renderFills(layerData: LayerData): string {
     if (!layerData.fills || !layerData.fills.length)

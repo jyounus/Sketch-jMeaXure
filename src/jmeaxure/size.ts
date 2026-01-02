@@ -26,7 +26,7 @@ function drawSize(layer: Layer, position: Edge | EdgeVertical): void {
         position === EdgeVertical.middle ||
         position === EdgeVertical.bottom ?
         "width" : "height";
-    let name = "#meaxure-" + sizeType + "-" + position + "-" + layer.id;
+    let name = "#jmeaxure-" + sizeType + "-" + position + "-" + layer.id;
     let artboard = layer.getParentArtboard();
     let root = artboard || layer.getParentPage();
     if (!root) return;

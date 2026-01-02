@@ -1,6 +1,6 @@
 import { state } from "../../common";
 import { localize, project } from "../../common";
-import { SMColor } from "../../../src/meaxure/interfaces";
+import { SMColor } from "../../../src/jmeaxure/interfaces";
 export function colorItem(color: SMColor): string {
     var colorName = (project.colorNames) ? project.colorNames[color['argb-hex']] : '';
     colorName = (colorName) ? ' data-name="' + colorName + '"' : '';

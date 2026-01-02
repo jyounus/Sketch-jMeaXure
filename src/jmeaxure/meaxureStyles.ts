@@ -55,22 +55,22 @@ export class MeaxureStyles {
         this._document = document;
     }
     get coordinate(): MeaxureStyle {
-        return getMeaxureStyle(this._document, 'Sketch MeaXure / Coordinate', 'coordinate');
+        return getMeaxureStyle(this._document, 'Sketch jMeaXure / Coordinate', 'coordinate');
     }
     get overlay(): MeaxureStyle {
-        return getMeaxureStyle(this._document, 'Sketch MeaXure / Overlay', 'overlay');
+        return getMeaxureStyle(this._document, 'Sketch jMeaXure / Overlay', 'overlay');
     }
     get spacing(): MeaxureStyle {
-        return getMeaxureStyle(this._document, 'Sketch MeaXure / Spacing', 'spacing');
+        return getMeaxureStyle(this._document, 'Sketch jMeaXure / Spacing', 'spacing');
     }
     get size(): MeaxureStyle {
-        return getMeaxureStyle(this._document, 'Sketch MeaXure / Size', 'size');
+        return getMeaxureStyle(this._document, 'Sketch jMeaXure / Size', 'size');
     }
     get property(): MeaxureStyle {
-        return getMeaxureStyle(this._document, 'Sketch MeaXure / Property', 'property');
+        return getMeaxureStyle(this._document, 'Sketch jMeaXure / Property', 'property');
     }
     get note(): MeaxureStyle {
-        return getMeaxureStyle(this._document, 'Sketch MeaXure / Note', 'note');
+        return getMeaxureStyle(this._document, 'Sketch jMeaXure / Note', 'note');
     }
 }
 

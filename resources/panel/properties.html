@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mark properties - Sketch MeaXure</title>
+    <title>Mark properties - Sketch jMeaXure</title>
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
@@ -187,7 +187,7 @@
                 var $this = $(this);
                 options.properties.push($this.val());
             });
-            meaxure.postMessage('submit', options);
+            jmeaxure.postMessage('submit', options);
         });
 
     }
@@ -195,8 +195,8 @@
   </head>
   <body>
         <script>
-            if (window.meaxure) {
-                meaxure.postMessage('init').then(data => {
+            if (window.jmeaxure) {
+                jmeaxure.postMessage('init').then(data => {
                     init(data);
                     onInitOK();
                 }).catch(error => showError(error));

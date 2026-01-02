@@ -34,7 +34,7 @@
 │   │       └── index.d.ts
 │   ├── index.ts
 │   ├── manifest.json(配置菜单)
-│   ├── meaxure(sketch处理)
+│   ├── jmeaxure(sketch处理)
 │   │   ├── addSlice.js（添加切图）
 │   │   ├── common
 │   │   │   ├── config.ts
@@ -159,7 +159,7 @@
 │   │   └── zoom.ts
 │   ├── static(静态资源和模板)
 │   │   ├── jquery.js
-│   │   ├── meaxure.css
+│   │   ├── jmeaxure.css
 │   │   ├── normalize.css
 │   │   └── template.html
 │   └── tsconfig.json

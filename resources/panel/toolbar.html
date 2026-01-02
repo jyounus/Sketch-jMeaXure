@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toolbar - Sketch MeaXure</title>
+    <title>Toolbar - Sketch jMeaXure</title>
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
@@ -111,8 +111,8 @@
                     this.dataset
                 );
                 // console.log(options);
-                if (!window.meaxure) return;
-                meaxure.postMessage('command', options);
+                if (!window.jmeaxure) return;
+                jmeaxure.postMessage('command', options);
             });
             $('input[type=checkbox]').change(function () {
                 let options = {
@@ -120,8 +120,8 @@
                     byPercentage: $('input[name=byPercentage]:checked').val() == '1',
                 }
                 // console.log(options);
-                if (!window.meaxure) return;
-                meaxure.postMessage('command', options);
+                if (!window.jmeaxure) return;
+                jmeaxure.postMessage('command', options);
             });
         }
     </script>
@@ -175,8 +175,8 @@
 
 <body>
     <script>
-        if (window.meaxure) {
-            meaxure.postMessage('init').then(data => {
+        if (window.jmeaxure) {
+            jmeaxure.postMessage('init').then(data => {
                 init(data);
                 onInitOK();
             }).catch(error => showError(error));

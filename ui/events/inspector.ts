@@ -2,6 +2,7 @@ import { state } from "../common";
 import { colors } from "../render/colors";
 import { eventDelegate } from "./delegate";
 import { message } from "../render/helper";
+import $ from 'jquery';
 
 export function inspectorEvents() {
     let formats = ['color-hex', 'argb-hex', 'css-rgba', 'css-hsla', 'ui-color'];

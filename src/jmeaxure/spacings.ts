@@ -45,27 +45,27 @@ function distance(layers: Layer[], position: string) {
     switch (position) {
         case "":
         case "horizontal":
-            drawHorizontal(root, "#meaxure-spacing-horizontal-" + fromID + "-" + toID, from, to);
+            drawHorizontal(root, "#jmeaxure-spacing-horizontal-" + fromID + "-" + toID, from, to);
             if (position) return;
         case "":
         case "vertical":
-            drawVertical(root, "#meaxure-spacing-vertical-" + fromID + "-" + toID, from, to);
+            drawVertical(root, "#jmeaxure-spacing-vertical-" + fromID + "-" + toID, from, to);
             if (position) return;
         case "":
         case "top":
-            drawTop(root, "#meaxure-spacing-top-" + fromID + "-" + toID, from, to);
+            drawTop(root, "#jmeaxure-spacing-top-" + fromID + "-" + toID, from, to);
             if (position) return;
         case "":
         case "bottom":
-            drawBottom(root, "#meaxure-spacing-bottom-" + fromID + "-" + toID, from, to);
+            drawBottom(root, "#jmeaxure-spacing-bottom-" + fromID + "-" + toID, from, to);
             if (position) return;
         case "":
         case "left":
-            drawLeft(root, "#meaxure-spacing-left-" + fromID + "-" + toID, from, to);
+            drawLeft(root, "#jmeaxure-spacing-left-" + fromID + "-" + toID, from, to);
             if (position) return;
         case "":
         case "right":
-            drawRight(root, "#meaxure-spacing-right-" + fromID + "-" + toID, from, to);
+            drawRight(root, "#jmeaxure-spacing-right-" + fromID + "-" + toID, from, to);
             if (position) return;
         default:
             break;

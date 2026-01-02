@@ -18,7 +18,7 @@ export function markOverlays() {
 }
 
 function overlay(target: Layer) {
-    let name = "#meaxure-overlay-" + target.id;
+    let name = "#jmeaxure-overlay-" + target.id;
     let artboard = target.getParentArtboard();
     let root = artboard || target.getParentPage();
     if (!root) return;

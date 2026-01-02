@@ -11,7 +11,7 @@ const jsSrc = 'demo/src/index.js'       //同步更新在线js
 const cssSrc = 'demo/src/index.css'       //同步更新在线css
 const cssFiles = [
     'ui/static/normalize.css',
-    'ui/static/meaxure.css'
+    'ui/static/jmeaxure.css'
 ];
 
 const toDate = new Date();

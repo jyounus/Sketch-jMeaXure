@@ -1,6 +1,6 @@
 import { zoomSize, unitSize, percentageSize } from "../render/helper";
 import { state } from "../common";
-import { SMRect } from "../../src/meaxure/interfaces";
+import { SMRect } from "../../src/jmeaxure/interfaces";
 import { getIntersection } from "./helper";
 
 export function distance() {

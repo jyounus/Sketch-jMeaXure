@@ -24,7 +24,7 @@ export let assetsPath: string;
 export let stopwatch = newStopwatch();
 
 export async function exportSpecification() {
-    const RUNNING_FLAG_KEY = "co.jebbs.sketch-meaxure.exporting"
+    const RUNNING_FLAG_KEY = "co.jebbs.sketch-jmeaxure.exporting"
     if (sketch.Settings.sessionVariable<boolean>(RUNNING_FLAG_KEY)) {
         sketch.UI.message(localize('Please wait for former task to exit'));
         return;

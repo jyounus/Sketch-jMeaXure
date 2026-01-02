@@ -24,7 +24,7 @@ function note(target: Text) {
     let root = target.getParentArtboard() || target.getParentPage();
     if (!root) return;
 
-    let name = "#meaxure-note-" + new Date().getTime();
+    let name = "#jmeaxure-note-" + new Date().getTime();
     let note = createLabel(target.text, {
         name: name,
         parent: root,

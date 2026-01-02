@@ -3,10 +3,10 @@ import { ProjectData } from "./common";
 
 declare global {
     interface Window {
-        meaxure: { render: (data: ProjectData) => void };
+        jmeaxure: { render: (data: ProjectData) => void };
     }
 }
 
-window.meaxure = {
+window.jmeaxure = {
     render: render,
 }

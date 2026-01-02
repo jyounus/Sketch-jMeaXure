@@ -5,13 +5,20 @@
         "noImplicitAny": false,
         "sourceMap": true,
         "rootDir": "src",
-        "noEmitOnError": true,
+        "noEmitOnError": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
         "lib": [
-            "es6"
+            "es6",
+            "dom"
         ],
         "typeRoots": [
             "node_modules/@types",
             "src/@custom_types"
+        ],
+        "types": [
+            "node",
+            "cocoascript"
         ]
     },
     "exclude": [

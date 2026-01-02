@@ -1,5 +1,5 @@
 import { localize } from "../../common";
-import { LayerData } from "../../../src/meaxure/interfaces";
+import { LayerData } from "../../../src/jmeaxure/interfaces";
 import { unitSize, unitBorderRadius } from "../helper";
 import { propertyType } from "./shared";
 export function renderProperties(layerData: LayerData): string {

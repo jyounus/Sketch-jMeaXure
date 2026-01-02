@@ -21,7 +21,7 @@ export function drawCoordinate() {
 }
 function coordinateLayer(layer: Layer) {
     let layerID = layer.id;
-    let layerName = "#meaxure-coordinate-" + layerID;
+    let layerName = "#jmeaxure-coordinate-" + layerID;
     let artboard = layer.getParentArtboard();
     let root = artboard || layer.getParentPage();
     if (!root) return;

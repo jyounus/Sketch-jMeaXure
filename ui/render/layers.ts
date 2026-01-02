@@ -1,6 +1,6 @@
 import { state, project } from "../common";
 import { zoomSize, percentageSize, unitSize } from "./helper";
-import { SMType } from "../../src/meaxure/interfaces";
+import { SMType } from "../../src/jmeaxure/interfaces";
 
 export var MapArtboardIDToIndex: { [key: string]: number } = undefined;
 export function layers() {

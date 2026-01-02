@@ -1,5 +1,6 @@
 /// <reference path="../../node_modules/@types/jquery/index.d.ts"/>
 import { project } from "../common";
+import $ from 'jquery';
 
 export function allAtlasMethod() {
     //判断瀑布流状态
